@@ -1,0 +1,7 @@
+{
+    "buildSystemVersion": 2,
+    "env": {
+      "NODE_VERSION": "20",
+      "NPM_VERSION": "10"
+    }
+  }
