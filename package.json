@@ -1,4 +1,7 @@
 {
+  "name": "linkup-docs",
+  "version": "1.0.0",
+  "description": "LinkUp API Documentation",
   "dependencies": {
     "sharp": "^0.33.5"
   },
@@ -7,6 +10,6 @@
   },
   "scripts": {
     "dev": "mintlify dev",
-    "build": "mkdir -p public && cp -r * public/ && rm -rf public/public && rm -rf public/node_modules"
+    "build": "mintlify build"
   }
 }
