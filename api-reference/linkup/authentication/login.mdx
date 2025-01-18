@@ -4,6 +4,12 @@ api: 'POST /v1/auth/login'
 description: 'Authenticate with LinkedIn credentials'
 ---
 
+### Credits
+
+<ParamField name="cost" type="number">
+  1 credit per request
+</ParamField>
+
 Authenticate with your LinkedIn account. If verification is required, a security code will be sent to your email.
 
 ### Header Parameters
@@ -21,9 +27,11 @@ Authenticate with your LinkedIn account. If verification is required, a security
 <ParamField body="password" type="string" required>
   Your LinkedIn password
 </ParamField>
+
 <ParamField body="country" type="string" default="FR">
   Country code for proxy selection
 </ParamField>
+
 ### Response
 
 <ResponseField name="status" type="string">
