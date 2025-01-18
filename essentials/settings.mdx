@@ -22,16 +22,18 @@ icon: 'gear'
 Our API uses `x-api-key` authentication. Configure this in your `mint.json`:
 
 ```json
-"api": {
-  "auth": {
-    "method": "key",
-    "name": "x-api-key"
+{
+  "api": {
+    "auth": {
+      "method": "key",
+      "name": "x-api-key"
+    }
   }
 }
 ```
 
 <Note>
-The API key should be included in the header of every request as `x-api-key: your_api_key_here`
+  The API key should be included in the header of every request as `x-api-key: your_api_key_here`
 </Note>
 
 ## Response Fields
@@ -69,32 +71,27 @@ For nested objects:
 
 Use these components to show code examples:
 
-```jsx
 <CodeGroup>
-  {/* Python Example */}
-  ```python Python
-  import requests
 
-  headers = {
-    "x-api-key": "your_api_key_here"
-  }
+```python Python
+import requests
 
-  response = requests.post(url, headers=headers)
-  ```
+headers = {
+  "x-api-key": "your_api_key_here"
+}
 
-  {/* cURL Example */}
-  ```bash cURL
-  curl -X POST "https://api.linkupapi.com/endpoint" \
-    -H "x-api-key: your_api_key_here"
-  ```
-</CodeGroup>
+response = requests.post(url, headers=headers)
 ```
+
+```bash cURL
+curl -X POST "https://api.linkupapi.com/endpoint" \
+  -H "x-api-key: your_api_key_here"
+```
+
+</CodeGroup>
 
 ## Error Codes
 
-Use tables to document error codes:
-
-```jsx
 | Status Code | Description                    |
 |------------|--------------------------------|
 | 400        | Invalid request parameters     |
@@ -102,7 +99,6 @@ Use tables to document error codes:
 | 403        | Invalid or missing x-api-key   |
 | 429        | Rate limit exceeded            |
 | 500        | Internal server error          |
-```
 
 ## Best Practices
 
@@ -116,7 +112,6 @@ Use tables to document error codes:
 
 Here's a complete example of an endpoint documentation:
 
-```jsx
 ---
 title: 'Create Post'
 api: 'POST /v1/linkedin/posts/create'
@@ -138,21 +133,20 @@ Create a new LinkedIn post
 </ResponseField>
 
 <CodeGroup>
-  ```python Python
-  import requests
 
-  headers = {
-    "x-api-key": "your_api_key_here"
-  }
+```python Python
+import requests
 
-  data = {
-    "message": "Hello LinkedIn!",
-    "login_cookie": "your_cookie"
-  }
+headers = {
+  "x-api-key": "your_api_key_here"
+}
 
-  response = requests.post(url, headers=headers, data=data)
-  ```
-</CodeGroup>
+data = {
+  "message": "Hello LinkedIn!",
+  "login_cookie": "your_cookie"
+}
+
+response = requests.post(url, headers=headers, data=data)
 ```
 
-Would you like me to explain any specific component in more detail?
+</CodeGroup>
