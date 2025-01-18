@@ -7,6 +7,6 @@
   },
   "scripts": {
     "dev": "mintlify dev",
-    "build": "mkdir -p public && cp -r *.json *.md *.mdx api-reference introduction public/ || true"
+    "build": "mkdir -p public && cp -r * public/ && rm -rf public/public && rm -rf public/node_modules"
   }
 }
